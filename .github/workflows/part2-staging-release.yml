@@ -41,6 +41,6 @@ jobs:
 
       - name: Update Staging Slot with the Latest Image #
         run: |
-          az webapp config container set-resource-group r02 \
+          az webapp config container set --resource-group r02 \
           --name webapp09nisigaki -slot webappslot01 \
           --docker-custom-image-name acr01nisigaki.azurecr.io/todolist:v1.0.0-tem_17.0.4_8-jre-alpine_$GITHUB_SHA
